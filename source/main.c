@@ -62,9 +62,11 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
 
-		tick();
+		/*tick();
 		while(!TimerFlag){}
-		TimerFlag = 0;	
+		TimerFlag = 0;	*/
+	    
+	    set_PWM(0);
     }
 	
     PWM_off();
