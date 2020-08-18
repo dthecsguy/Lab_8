@@ -52,14 +52,14 @@ int main(void) {
     /* Insert DDR and PORT initializations */
     DDRA = 0x00;    PORTA = 0xFF;
     DDRB = 0xFF;    PORTB = 0x00;
-	
+	PWM_on()
 	
 	state = WAIT;
     
     /* Insert your solution below */
     while (1) {
 
-		PORTB = INPUTS;	    
+		set_PWM(0);    
     }
 	
     PWM_off();
