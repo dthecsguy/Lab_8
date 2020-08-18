@@ -53,8 +53,6 @@ int main(void) {
     DDRA = 0x00;    PORTA = 0xFF;
     DDRB = 0xFF;    PORTB = 0x00;
 	
-	TimerSet(50);
-	TimerOn();
 	PWM_on();
 	
 	state = WAIT;
