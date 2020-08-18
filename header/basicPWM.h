@@ -12,7 +12,7 @@
 #define D_FREQ 293.66
 #define E_FREQ 329.63
 
-#define INPUTS (0xF8 | A2 | A1 | A0)
+#define INPUTS (0x00 | A2 | A1 | A0)
 #define HLD_T 4 //how long to hold button
 
 enum States {WAIT, C_PRESSED, D_PRESSED, E_PRESSED, C_HELD, D_HELD, E_HELD} state;
