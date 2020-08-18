@@ -9,7 +9,7 @@
 #define INPUTS (C | D | E)
 #define HLD_T 4 //how long to hold button
 
-enum States {WAIT, C_PRESSED, D_PRESSED E_PRESSED, C_HELD, D_HELD, E_HELD} state;
+enum States {WAIT, C_PRESSED, D_PRESSED, E_PRESSED, C_HELD, D_HELD, E_HELD} state;
 
 void tick(){
    switch(state){  //Transitions
@@ -28,7 +28,7 @@ void tick(){
 			}
 			break;
 		case C_PRESSED:
-			if (ticks < HLD_T){
+			if (cnt < HLD_T){
 				state = (INPUTS == C) ? C_PRESSED : WAIT;
 			}
 			else {
@@ -37,7 +37,7 @@ void tick(){
 			break;
 		
 		case D_PRESSED:
-			if (ticks < HLD_T){
+			if (cnt < HLD_T){
 				state = (INPUTS == D) ? D_PRESSED : WAIT;
 			}
 			else {
@@ -46,7 +46,7 @@ void tick(){
 			break;
 		
 		case E_PRESSED:
-			if (ticks < HLD_T){
+			if (cnt < HLD_T){
 				state = (INPUTS == E) ? E_PRESSED : WAIT;
 			}
 			else {
