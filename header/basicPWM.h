@@ -1,8 +1,8 @@
-#define A ~PINA
+#define INPUTS ~PINA
 
-#define A2 (A & 0x04)
-#define A1 (A & 0x02)
-#define A0 (A & 0x01)
+#define A2 (INPUTS & 0x04)
+#define A1 (INPUTS & 0x02)
+#define A0 (INPUTS & 0x01)
 
 #define C_FREQ 261.63
 #define D_FREQ 293.66

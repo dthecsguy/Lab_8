@@ -60,7 +60,7 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
 
-		set_PWM(E_FREQ);	    
+		PORTB = (PINA & 0x01) << 6;	    
     }
 	
     PWM_off();
