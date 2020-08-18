@@ -1,14 +1,18 @@
 #define A ~PINA
 
-#define C (A & 0x04)
-#define D (A & 0x02)
-#define E (A & 0x01)
+#define A2 (A & 0x04)
+#define A1 (A & 0x02)
+#define A0 (A & 0x01)
+
+#define C ~(0x04)
+#define D ~(0x02)
+#define E ~(0x01)
 
 #define C_FREQ 261.63
 #define D_FREQ 293.66
 #define E_FREQ 329.63
 
-#define INPUTS (C | D | E)
+#define INPUTS (0xF8 | A2 | A1 | A0)
 #define HLD_T 4 //how long to hold button
 
 enum States {WAIT, C_PRESSED, D_PRESSED, E_PRESSED, C_HELD, D_HELD, E_HELD} state;
