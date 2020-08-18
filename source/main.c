@@ -55,6 +55,7 @@ int main(void) {
 	
 	TimerSet(50);
 	TimerOn();
+	PWM_on()
 	
 	state = WAIT;
     
