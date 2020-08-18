@@ -63,8 +63,6 @@ int main(void) {
     while (1) {
 
 		tick();
-		while(!TimerFlag){}
-		TimerFlag = 0;	
 	    
     }
 	
