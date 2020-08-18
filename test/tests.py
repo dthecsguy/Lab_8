@@ -17,6 +17,10 @@
 tests = [ {'description': 'This test will run first.',
     'steps': [ {'inputs': [('PINA',0xFB)], 'iterations': 50 } ],
     'expected': [('PORTB',0x00)],
+    },
+         {'description': 'This test will run first.',
+    'steps': [ {'inputs': [('PINA',0xFB)], 'iterations': 200 } ],
+    'expected': [('PORTB',0x40)],
     }
     ]
 
