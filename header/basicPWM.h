@@ -78,7 +78,7 @@ void tick(){
 		case WAIT:
 			cnt = 0;
 		   	set_PWM((double)0);
-		   	PWM_on;
+		   	PWM_on();
 			break;
 			
 		case C_PRESSED:
@@ -96,19 +96,19 @@ void tick(){
 		case C_HELD:
 			cnt = 0;
 			set_PWM(C_FREQ);
-		   	PWM_on;
+		   	PWM_on();
 			break;
 		
 		case D_HELD:
 			cnt = 0;
 			set_PWM(D_FREQ);
-		   	PWM_on;
+		   	PWM_on();
 			break;
 		
 		case E_HELD:
 			cnt = 0;
 			set_PWM(E_FREQ);
-		   	PWM_on;
+		   	PWM_on();
 			break;
 		   
    }
