@@ -60,7 +60,7 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
 
-		PORTB = (PINA & 0x01) << 6;	    
+		PORTB = (PINA & 0x04) << 4;	    
     }
 	
     PWM_off();
