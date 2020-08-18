@@ -59,7 +59,7 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
 
-		set_PWM(0);    
+		set_PWM(D_FREQ);    
     }
 	
     PWM_off();
