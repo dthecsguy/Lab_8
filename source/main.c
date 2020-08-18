@@ -60,8 +60,7 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
 
-		tick();
-	    
+		set_PWM(0);	    
     }
 	
     PWM_off();
