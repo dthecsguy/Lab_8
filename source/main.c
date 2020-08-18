@@ -17,7 +17,7 @@
 #include "basicPWM.h"
 
 volatile unsigned char TimerFlag = 0;
-static unsigned char tick = 0;
+static unsigned char cnt = 0;
 void TimerISR() { TimerFlag = 1; }
 
 void set_PWM(double frequency) {
