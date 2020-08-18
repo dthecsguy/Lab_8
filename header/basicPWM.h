@@ -74,7 +74,7 @@ void tick(){
    switch(state){  //Actions
 		case WAIT:
 			cnt = 0;
-		   	set_PWM(0);
+		   	set_PWM((double)0);
 			break;
 			
 		case C_PRESSED:
