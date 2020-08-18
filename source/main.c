@@ -65,9 +65,10 @@ int main(void) {
 		tick();
 		while(!TimerFlag){}
 		TimerFlag = 0;
+	    	PWM_off();
 		
     }
 	
-	PWM_off();
+	
     return 1;
 }
