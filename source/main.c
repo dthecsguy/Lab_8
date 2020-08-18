@@ -66,7 +66,7 @@ int main(void) {
 		while(!TimerFlag){}
 		TimerFlag = 0;	*/
 	    
-	    set_PWM(0);
+	    set_PWM(C_FREQ);
     }
 	
     PWM_off();
