@@ -69,33 +69,34 @@ void tick(){
    }
    switch(state){  //Actions
 		case WAIT:
-			tick = 0;
+			cnt = 0;
+		   	set_PWM(0);
 			break;
 			
 		case C_PRESSED:
-			tick++;
+			cnt++;
 			break;
 		
 		case D_PRESSED:
-			tick++;
+			cnt++;
 			break;
 		
 		case E_PRESSED:
-			tick++;
+			cnt++;
 			break;
 		
 		case C_HELD:
-			tick = 0;
+			cnt = 0;
 			set_PWM(C_FREQ);
 			break;
 		
 		case D_HELD:
-			tick = 0;
+			cnt = 0;
 			set_PWM(D_FREQ);
 			break;
 		
 		case E_HELD:
-			tick = 0;
+			cnt = 0;
 			set_PWM(E_FREQ);
 			break;
    }
