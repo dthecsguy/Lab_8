@@ -57,6 +57,8 @@ int main(void) {
 	TimerOn();
 	
 	PWM_on();
+	
+	state = WAIT;
     
     /* Insert your solution below */
     while (1) {
