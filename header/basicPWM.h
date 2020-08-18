@@ -4,9 +4,9 @@
 #define A1 (A & 0x02)
 #define A0 (A & 0x01)
 
-#define C ~(0x04)
-#define D ~(0x02)
-#define E ~(0x01)
+#define C (0x04)
+#define D (0x02)
+#define E (0x01)
 
 #define C_FREQ 261.63
 #define D_FREQ 293.66
@@ -78,7 +78,6 @@ void tick(){
 		case WAIT:
 			cnt = 0;
 		   	set_PWM((double)0);
-		   	PWM_on();
 			break;
 			
 		case C_PRESSED:
@@ -96,19 +95,16 @@ void tick(){
 		case C_HELD:
 			cnt = 0;
 			set_PWM(C_FREQ);
-		   	PWM_on();
 			break;
 		
 		case D_HELD:
 			cnt = 0;
 			set_PWM(D_FREQ);
-		   	PWM_on();
 			break;
 		
 		case E_HELD:
 			cnt = 0;
 			set_PWM(E_FREQ);
-		   	PWM_on();
 			break;
 		   
    }
