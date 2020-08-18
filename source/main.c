@@ -7,13 +7,14 @@
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
  */
-#include <avr/io.h>
-#include "timer.h"
-#include "basicPWM.h"
 
 #ifdef _SIMULATE_
 #include "simAVRHeader.h"
 #endif
+
+#include <avr/io.h>
+#include "timer.h"
+#include "basicPWM.h"
 
 volatile unsigned char TimerFlag = 0;
 static unsigned char tick = 0;
