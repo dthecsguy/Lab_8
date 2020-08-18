@@ -12,6 +12,8 @@
 enum States {WAIT, C_PRESSED, D_PRESSED, E_PRESSED, C_HELD, D_HELD, E_HELD} state;
 
 void tick(){
+   static unsigned char cnt = 0;
+	
    switch(state){  //Transitions
 		case WAIT:
 			if (INPUTS == C){
