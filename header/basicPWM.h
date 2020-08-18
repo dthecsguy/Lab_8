@@ -31,30 +31,16 @@ void tick(){
 			break;
 		   
 		case C_PRESSED:
-			if (cnt < HLD_T){
-				state = (A2) ? C_PRESSED : WAIT;
-			}
-			else {
-				state = (A2) ? C_HELD : WAIT;
-			}
+			
+			state = (A2) ? C_HELD : WAIT;
 			break;
 		
 		case D_PRESSED:
-			if (cnt < HLD_T){
-				state = (A1) ? D_PRESSED : WAIT;
-			}
-			else {
-				state = (A1) ? D_HELD : WAIT;
-			}
+			state = (A1) ? D_HELD : WAIT;
 			break;
 		
 		case E_PRESSED:
-			if (cnt < HLD_T){
-				state = (A0) ? E_PRESSED : WAIT;
-			}
-			else {
-				state = (A0) ? E_HELD : WAIT;
-			}
+			state = (A0) ? E_HELD : WAIT;
 			break;
 		
 		case C_HELD:
@@ -72,34 +58,27 @@ void tick(){
    }
    switch(state){  //Actions
 		case WAIT:
-			cnt = 0;
 		   	set_PWM((double)0);
 			break;
 			
 		case C_PRESSED:
-			cnt++;
 			break;
 		
-		case D_PRESSED:
-			cnt++;
+	   	case D_PRESSED:
 			break;
 		
 		case E_PRESSED:
-			cnt++;
 			break;
 		
-		case C_HELD:
-			cnt = 0;
+	   	case C_HELD:
 			set_PWM(C_FREQ);
 			break;
 		
 		case D_HELD:
-			cnt = 0;
 			set_PWM(D_FREQ);
 			break;
 		
 		case E_HELD:
-			cnt = 0;
 			set_PWM(E_FREQ);
 			break;
 		   
