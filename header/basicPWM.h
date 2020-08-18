@@ -1,6 +1,8 @@
-#define C (~PINA & 0x04)
-#define D (~PINA & 0x02)
-#define E (~PINA & 0x01)
+#define A ~PINA
+
+#define C (A & 0x04)
+#define D (A & 0x02)
+#define E (A & 0x01)
 
 #define C_FREQ 261.63
 #define D_FREQ 293.66
